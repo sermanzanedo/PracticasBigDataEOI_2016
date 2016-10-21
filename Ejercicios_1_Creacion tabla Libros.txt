@@ -1,0 +1,22 @@
+CREATE TABLE Libros (
+    registro      INT (4)        NOT NULL
+                                 PRIMARY KEY
+                                 UNIQUE,
+    título        VARCHAR (35)   NOT NULL
+                                 DEFAULT ('') 
+                                 UNIQUE,
+    escritor      VARCHAR (35)   NOT NULL
+                                 DEFAULT (''),
+    editorial     VARCHAR (20)   NOT NULL
+                                 DEFAULT (''),
+    soporte       VARCHAR (35)   NOT NULL
+                                 DEFAULT ('LIBRO'),
+    fecha_entrada DATE           NOT NULL
+                                 DEFAULT (0 - 0 - 0) 
+                                 UNIQUE,
+    pais          VARCHAR (20)   NOT NULL
+                                 DEFAULT NULL,
+    importe       DECIMAL (8, 2) NOT NULL
+                                 DEFAULT (0),
+    anotaciones   BLOB
+);
